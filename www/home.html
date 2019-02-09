@@ -31,8 +31,12 @@
 			 });
 			 function signOut() {
 				 firebase.auth().signOut();
-				 window.location.href = "index.html";
+				 window.location.href = "home.html#";
 			 }
+			 var ref = firebase.database().ref();
+			ref.on("value", function(snapshot){
+				output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
+			});
 		 </script>
 		 
  	</head>
