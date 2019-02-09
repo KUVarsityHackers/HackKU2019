@@ -21,15 +21,7 @@
 			   };
 		   firebase.initializeApp(config);
 
-		   var database = firebase.database();
-		   function writeUserData(userId, name, item, quantity) {
-			   firebase.database().ref('users/' + userId).set({
-				   userId: userId,
-				   username: name,
-				   item: item,
-				   quantity : quantity
-			   });
-		   }
+		   
 		</script>
 	</head>
 	<body style="background-size: 200% 100% !important;
