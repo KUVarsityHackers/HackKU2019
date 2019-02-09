@@ -13,9 +13,28 @@
  		<link rel="stylesheet" href="main.css" />
  		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-<script src=""></script>
-
-</script>
+		 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		 <script>
+			 var config = {
+					 apiKey: "AIzaSyARS9LFtCcuxdKxgvoejWKJMU1DauaDwOM"
+					 authDomain: "homelesshelper.firebaseapp.com",
+					 databaseURL: "https://homelesshelper.firebaseio.com",
+					 projectId: "homelesshelper"
+				 };
+			 firebase.initializeApp(config);
+			 firebase.auth().onAuthStateChanged(function(user) {
+				 if (user) {
+					 //alert(user.email);
+				 } else {
+					 //alert("User not signed in");
+				 }
+			 });
+			 function signOut() {
+				 firebase.auth().signOut();
+				 window.location.href = "index.html";
+			 }
+		 </script>
+		 
  	</head>
 
 			<!-- Banner -->
