@@ -3043,8 +3043,8 @@
        		 animation: move 10s ease infinite;
        		 -webkit-transform: translate3d(0, 0, 0);
        		 transform: translate3d(0, 0, 0);
-       		 background: -webkit-linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
-       		 background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+       		 background: -webkit-linear-gradient(45deg, rgb(73, 168, 212) 10%, #A2C7E5 90%);
+       		 background: linear-gradient(45deg, rgb(73, 168, 212) 10%, #A2C7E5 90%);
        		 height: 100vh;
 	}
 
