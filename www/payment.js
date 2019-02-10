@@ -34,6 +34,6 @@ $("#pay").click(function(){
       })
   }).then(function(){
     console.log("hello");
-    window.location.replace('./thankYou.html');  
+    window.location.replace('./mappingPage.html');  
   });
 })
