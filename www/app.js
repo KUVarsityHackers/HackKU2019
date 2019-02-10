@@ -10,7 +10,16 @@ var app = new Vue({
     var self = this;
     self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5 });
     self.scanner.addListener('scan', function (content, image) {
-      self.scans.unshift({ date: +(Date.now()), content: content });
+      alert(content);
+      var cookie = getCookie("hobo");
+      if(cookie == ""){
+      	var expDate = getExpDate(180, 0, 0);
+        setCookie("hobo", content, expDate);
+      }
+      console.log("hobo is: ");
+      console.log(cookie);
+      window.location.href = "./donorChoices.html";
+      // self.scans.unshift({ date: +(Date.now()), content: content });
     });
     Instascan.Camera.getCameras().then(function (cameras) {
       self.cameras = cameras;
