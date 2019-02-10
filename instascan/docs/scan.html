@@ -34,6 +34,9 @@
         </section>
       </div> -->
       <section class="scans">
+          <ul v-if="scans.length === 1">
+              <li href="C:/users/naten/HackKU2019/www/donorChoices.html"></li>
+            </ul>
         <transition-group name="scans" tag="ul">
           <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
         </transition-group>
