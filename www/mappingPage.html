@@ -34,6 +34,23 @@
 			var map;
 			var service;
 			var infowindow;
+			var pos;
+
+			 // Try HTML5 geolocation.
+			 if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+			};
+		}, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      
 	  
 			function initMap() {
 			  var sydney = new google.maps.LatLng(38.957333, -95.253423);
@@ -41,17 +58,28 @@
 			  infowindow = new google.maps.InfoWindow();
 	  
 			  map = new google.maps.Map(
-				  document.getElementById('map'), {center: sydney, zoom: 15});
+				  document.getElementById('map'), {center: pos, zoom: 15});
 	  
-			  var request = {
-				query: 'Target',
+			  var request = [
+				{
+				query: 'target',
 				fields: ['name', 'geometry'],
 				locationBias: sydney,
-			  };
-	  
+				},
+				  
+				{
+				query: 'walmart',
+				fields: ['name', 'geometry'],
+				locationBias: sydney,
+				}			  
+			 ] ;
+  
 			  service = new google.maps.places.PlacesService(map);
 	  
-			  service.findPlaceFromQuery(request, function(results, status) {
+			 //start of loop
+			for (var a = 0; a< request.length; a++)
+			{
+			  service.findPlaceFromQuery(request[a], function(results, status) {
 				if (status === google.maps.places.PlacesServiceStatus.OK) {
 				  for (var i = 0; i < results.length; i++) {
 					createMarker(results[i]);
@@ -60,6 +88,9 @@
 				  map.setCenter(results[0].geometry.location);
 				}
 			  });
+
+  			}//end of for loop
+
 			}
 	  
 			function createMarker(place) {
