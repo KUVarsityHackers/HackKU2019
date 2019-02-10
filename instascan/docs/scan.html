@@ -33,15 +33,17 @@
           </transition-group>
         </section>
       </div> -->
+      <div v-if="scans.length">
+        <div class="popup" onclick="myFunction()"><a href="C:/users/naten/HackKU2019/www/donorChoices.html">Click to Proceed</a>
+          <span class="popuptext" id="myPopup">Popup text...</span>
+        </div>
+      </div>
       <section class="scans">
-          <ul v-if="scans.length === 1">
-              
-            </ul>
-        <transition-group name="scans" tag="ul">
+        <!-- <transition-group name="scans" tag="ul">
           <li v-for="scan in scans" :key="scan.date" :title="scan.content" ><a href="C:/users/naten/HackKU2019/www/donorChoices.html">{{ scan.content }}</a></li>
-        </transition-group>
+        </transition-group> -->
       </section>
-      <div class="preview-container" style = "height: 80%; padding-top: 10%;padding-right:70%">
+      <div class="preview-container" style = "height: 30%; padding-top: 10%;padding-right:90%">
         <video id="preview"></video>
       </div>
     </div>

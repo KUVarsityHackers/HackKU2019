@@ -31,6 +31,10 @@ var app = new Vue({
     selectCamera: function (camera) {
       this.activeCameraId = camera.id;
       this.scanner.start(camera);
+    },
+    myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
     }
   }
 });
