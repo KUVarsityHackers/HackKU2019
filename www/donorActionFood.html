@@ -6,26 +6,23 @@
 -->
 <html>
 	<head>
-		<!-- E-mail API script -->
-	<!--	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-		<script type="text/javascript">
-		   (function(){
-			  emailjs.init("user_MJi0lvyxnqow6o973Zdpz");
-		   })();
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFb-tnhXz4ZKKH-BOjgcDXTN3_tVWPwU8&libraries=geometry"></script>
+			<link rel="stylesheet" href="./main.css" />
+		
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="https://rawgit.com/Elden123/BetterWay/master/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
 		<script>
+		   var config = {
+				   apiKey: "AIzaSyARS9LFtCcuxdKxgvoejWKJMU1DauaDwOM"
+				   authDomain: "homelesshelper.firebaseapp.com",
+				   databaseURL: "https://homelesshelper.firebaseio.com",
+				   projectId: "homelesshelper"
+			   };
+		   firebase.initializeApp(config);
 
-
+		   
 		</script>
--->
 	</head>
 	<body style="background-size: 200% 100% !important;
   -webkit-animation: move 10s ease infinite;
@@ -91,7 +88,7 @@
 									<ul class="actions">
 											<li><a href="donorChoices.html" class="button">Back</a></li>
 											<li><a href="donorChoices.html" class="button">Add Item and Continue Shopping</a></li>
-											<li><a href="donorPayment.html" class="button">Checkout</a></li>
+											<li><a href="donorPayment.html" class="button" onclick="writeUserData('Greg23', 'Greg', 'banana', '4.5');">Checkout</a></li>
 					
 										</ul>
 

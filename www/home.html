@@ -13,45 +13,21 @@
  		<link rel="stylesheet" href="main.css" />
  		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-		 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-		 <script>
-			 var config = {
-					 apiKey: "AIzaSyARS9LFtCcuxdKxgvoejWKJMU1DauaDwOM"
-					 authDomain: "homelesshelper.firebaseapp.com",
-					 databaseURL: "https://homelesshelper.firebaseio.com",
-					 projectId: "homelesshelper"
-				 };
-			 firebase.initializeApp(config);
-			 firebase.auth().onAuthStateChanged(function(user) {
-				 if (user) {
-					 //alert(user.email);
-				 } else {
-					 //alert("User not signed in");
-				 }
-			 });
-			 function signOut() {
-				 firebase.auth().signOut();
-				 window.location.href = "home.html#";
-			 }
-			 var ref = firebase.database().ref();
-			ref.on("value", function(snapshot){
-				output.innerHTML = JSON.stringify(snapshot.val(), null, 2);
-			});
-		 </script>
 		 
  	</head>
 
 			<!-- Banner -->
 				<section id="banner">
 					<h2>Homeless Helper</h2>
-					<p>Helping eradicate homelessness.
+					<p>Graciousously giving to eradicate homelessness.
 					<br />
-					Give money. Spent wisely.</p>
 					<ul class="actions">
 						<li><a href="donorChoices.html" class="button">Donor</a></li>
 						<li><a href="storeVerification.html" class="button">Store</a></li>
 
 					</ul>
+					<img src="logo2.png" alt="logo" width="200">
+
 				</section>
 
 	<!-- Info boxes -->
@@ -59,7 +35,7 @@
 						<div class="features-row">
 							<section>
 								<img src="cogwheel.png" alt="Community" width="100">
-								<h3>Risk-free Homeless Donation</h3>
+								<h3>Risk-Free Homeless Donation</h3>
 								<p>Want to help a homeless individual? Scan their Helping Homeless card and choose from a list of essential items to purchase on their behalf.
 									Be confident your efforts have direct impact and your donations are applied appropriately. </p>
 							</section>
