@@ -26,7 +26,7 @@
         <section class="scans">
           <h2>Scans</h2>
           <ul v-if="scans.length === 0">
-            <li class="empty">No scans yet</li>
+            <li class="empty">No scangs yet</li>
           </ul>
           <transition-group name="scans" tag="ul">
             <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
@@ -35,10 +35,10 @@
       </div> -->
       <section class="scans">
           <ul v-if="scans.length === 1">
-              <li href="C:/users/naten/HackKU2019/www/donorChoices.html"></li>
+              
             </ul>
         <transition-group name="scans" tag="ul">
-          <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
+          <li v-for="scan in scans" :key="scan.date" :title="scan.content" ><a href="C:/users/naten/HackKU2019/www/donorChoices.html">{{ scan.content }}</a></li>
         </transition-group>
       </section>
       <div class="preview-container" style = "height: 80%; padding-top: 10%;padding-right:70%">
