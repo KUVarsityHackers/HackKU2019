@@ -8,8 +8,20 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="cookies.js"></script>
+		<script language="JavaScript" type="text/javascript" >
+				var data = getCookie("id");
+				console.log("This page cookie: ");
+				console.log(data);
+				var hobo = getCookie("hobo");
+				console.log("This page cookie: ");
+				console.log(hobo);
+		</script>
+
 		<link rel="stylesheet" href="./main.css" />
-		
+
 		<style>
 			table {
 				margin: 0 0 2em 0;
@@ -87,53 +99,27 @@
 
 				<section id="main" class="container">
 						<div class="box">
-						 
+
 								<p></p>
 					  <div>
 							<ul class="actions align-center">
 						<H2>
-					Items in Cart						
-					</H2>	
+					Items in Cart
+					</H2>
 					</ul>
 					</div>
-					
+
 
 							<ul class="actions align-center">
-								  
-									<table class="alt6" css="border-style:">
+
+									<table id="checkout-table" class="alt6" css="border-style:">
 											<thead>
 												<tr>
-													<th>Date</th>
 													<th>Item</th>
 													<th>Quantity</th>
 													<th>Unit Price</th>
 												</tr>
 											</thead>
-											<tbody id="toAddTo">
-												<tr>
-													<th>2/9/19</th>
-													<th>Bread</th>
-													<th>2</th>
-													<th>$3.50</th>
-												</tr>
-											</tbody>
-											<tbody id="toAddTo">
-												<tr>
-													<th>2/9/19</th>
-													<th>Bread</th>
-													<th>2</th>
-													<th>$3.50</th>
-													</tr>
-											</tbody>
-											<tbody id="toAddTo">
-												<tr>
-												<th>2/9/19</th>
-												<th>Bread</th>
-												<th>2</th>
-												<th>$3.50</th>
-													</tr>
-											</tbody>
-						
 										</table>
 										</ul>
 
@@ -141,20 +127,21 @@
 										<div class="actions align-center">
 												<section>
 													<h3>Total Cost: </h3>
+													<h2 id="total-cost"></h2>
 												</section>
 										</div>
 										</ul>
 
 
 										<ul class="actions align-center" style ="padding-bottom: 1%">
-												<li><a href="donorPayment.html" class="button">Pay</a></li>						
+												<li><a href="donorPayment.html" class="button">Pay</a></li>
 										</ul>
 
 								   </section>
-								
-	
-						
-	
+
+
+
+
 			<!-- Footer -->
 				<footer id="footer">
 						<ul class="copyright">
@@ -165,13 +152,6 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
+			<script src="checkout.js"></script>
 	</body>
 </html>
