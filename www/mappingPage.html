@@ -60,15 +60,26 @@
 			  map = new google.maps.Map(
 				  document.getElementById('map'), {center: pos, zoom: 15});
 	  
-			  var request = {
+			  var request = [
+				{
 				query: 'target',
 				fields: ['name', 'geometry'],
 				locationBias: sydney,
-			  };
-	  
+				},
+				  
+				{
+				query: 'walmart',
+				fields: ['name', 'geometry'],
+				locationBias: sydney,
+				}			  
+			 ] ;
+  
 			  service = new google.maps.places.PlacesService(map);
 	  
-			  service.findPlaceFromQuery(request, function(results, status) {
+			 //start of loop
+			for (var a = 0; a< request.length; a++)
+			{
+			  service.findPlaceFromQuery(request[a], function(results, status) {
 				if (status === google.maps.places.PlacesServiceStatus.OK) {
 				  for (var i = 0; i < results.length; i++) {
 					createMarker(results[i]);
@@ -77,6 +88,9 @@
 				  map.setCenter(results[0].geometry.location);
 				}
 			  });
+
+  			}//end of for loop
+
 			}
 	  
 			function createMarker(place) {
