@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "homelesshelper",
+  "private_key_id": "676b795b30bac8a1bc193debb5c3095ebb28730b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQChiLpqtg5Ony1w\nfgspuV7sPR72Laep+PqbIZoQaaG8Cd2copMlFlcJdWyRinwpJrLYkPmHd2KxpImU\nUrzWlbz6rZS+DeEixJeSZRbcq7Q9YqOuP1qe3p9DNZ3ckDu3ybQ2G0YKHWdSTI0i\nygaf4h2cD2jZStUa9+JSKSGAFLyW2cfi7m3HfWnpt3kyWp9gei3g603qI2UGBBle\nszT7lNnrfu4rICANUSitoowuoJFeMrunk49IyMqdsn3PU1CSZjhTXvsPpEbkFTCo\niBo3fQfor3r7IRVHdMZLNBZTfxQe0QLCuReB1KoBTMWrahN+zrJxgI5dzRDJgegm\nyGARUtwtAgMBAAECggEAFsETn2YLUGRoSnUa3fMEjcsTUjK+sDkIFjOux9qVY49R\nNhgJmbsSohy2IS9Mi6Btp4eOethkoOjwT2IzQxf/MaGjdv0uBk+CmWbfiFCwmEgN\njgVTHtd1wEosdU4k91/0oH2JiXG4ZPWvGOQz+DAqIxphluBNchnSeefc1fW11hrY\nm120q1E8pCgOmvwHFp1UZBjcfr9KG2b5dgcfdi7UmjsaK8CBbKWT39oVCReFltq4\nJIJwbxk3r9Y2ta2sX38ed9fTx/Cp8CnCkxOyeidwKNbyfmHlrTKN5owPLCf+Bv28\n69adQ/ndo78/OYbXzSzLflforvGv96Zz6DL2879OCQKBgQDOCTEj5+ISzyOVixtZ\n8FG1z78kTdg/QuCPqNJWtrczR5O+qswd2j3E/ETwD0V00LMIJe1tzgIL+N62LvUf\n6IhJ8d3HXS+6B7Jro7dfQ7YsjiljsnVTJ0523DukGdO1XEbA8dTXnF8Cl1rxAh/h\n8jLImpVy1lNfTfQxqe38QVqPWQKBgQDItNem+kPmis3THGlJpjFpcsF0FZspIE3B\nGhKoj4WUCBF4VtTojTabPuVVGaKKPJ1Wj8vN1/zjJj9rwjdTFETFMgPgwUke8wk6\ngMwclpA9doPAmni/IpAOsa8ZpDnNXO99QslHZt3h4VdKQFegcxLYKhy8vKitjm0i\njkV1q/uM9QKBgQCFl9QzEeG2jHToPCBp+rcgiinH4mm66yQsQizQaPz01Q5pbNmY\n6a9vkJsqhNxmWAQd3mnK7u7I0H+n5V6vZ9knCRrib/vIRcFcpfT6Yi83SJ5xtH76\ngdwQmdBaIRzy1XhTFvsJKq04QueGqff+S0q+Y+1PXsUEYMlbgnF7ROzxUQKBgQDB\nnqwX2oDci/UpftQXh6tNVbZIfXt0vkQkUDnFwMcVWn83/1Rfj7MpKxDj+tnxz63d\nTtVGm+HLZB90niTvEbOSJMDW9r/KipzRgmTmA13c3VMW4C4x/W7JriIEc4iLk+c5\niM9SAWt1uASUjeO61qhMPrwAW2PCIo8n8eYSMbp3bQKBgF83yOeMfyYd53DrfGFj\ne2OuFda5V66La1GxScTSZq25q2VBKsKKLI0E5KA8NcBuIjOXrruaAdVkfFOYboIY\nDI2OaNf7mzod6hQw+Ef571kvxMTLAL+//VKr6a4mKy3KWwdLQlopUUWFA6rUITbz\nLvRKilBhI0oJpgJ1rS4Xdstf\n-----END PRIVATE KEY-----\n",
+  "client_email": "python@homelesshelper.iam.gserviceaccount.com",
+  "client_id": "113604662062115344496",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/python%40homelesshelper.iam.gserviceaccount.com"
+}
