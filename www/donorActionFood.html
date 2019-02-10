@@ -7,20 +7,20 @@
 <html>
 	<head>
 			<link rel="stylesheet" href="./main.css" />
-		
+
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
-		<script>
-		   var config = {
-				   apiKey: "AIzaSyARS9LFtCcuxdKxgvoejWKJMU1DauaDwOM"
-				   authDomain: "homelesshelper.firebaseapp.com",
-				   databaseURL: "https://homelesshelper.firebaseio.com",
-				   projectId: "homelesshelper"
-			   };
-		   firebase.initializeApp(config);
-
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="./main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="cookies.js"></script>
+		<script language="JavaScript" type="text/javascript" >
+		    var data = getCookie("id");
+				console.log("This page cookie: ");
+		    console.log(data);
 		</script>
 	</head>
 	<body style="background-size: 200% 100% !important;
@@ -30,65 +30,39 @@
           transform: translate3d(0, 0, 0);
   background: -webkit-linear-gradient(45deg, rgb(73, 168, 212) 10%, #A2C7E5 90%);
   background: linear-gradient(45deg, rgb(73, 168, 212) 10%, #A2C7E5 90%);
-  height: 100vh;">
+  height: 100vh;" onunload="saveData()">
 		<div id="page-wrapper">
 			<!-- Main -->
 			<section id="main" class="container 75%">
          <ul class="actions align-center">
 					 <div class="box">
-						 
+
   								<p></p>
                         <div>
 
-								<div class="form-group" id="food-type">
+								<div class="form-group" id="food">
 										Select Item:
-										<select>
-											<option value="01"></option>
-											<option value="02">Loaf of Bread </option>
-											<option value="03">Fresh Fruit</option>
-											<option value="04">Peanut Butter</option>
-											<option value="05">Jelly</option>
-											<option value="06">Canned Soup</option>
-											<option value="07">Pre-Cooked Chicken</option>
-											<option value="08">Jelly</option>
-											<option value="09">Jelly</option>
-											<option value="10">Jelly</option>
-											<option value="11">Jelly</option>
-											<option value="12">Jelly</option>
-											<option value="13">Jelly</option>
-											<option value="14">Jelly</option>
-											<option value="15">Jelly</option>
-
-
+										<select id="item-list">
+											<option disabled selected value>Select an item</option>
 										</select>
 										<p></p>
 
-										<div class="form-group" id="food-quantity">
+										<div class="form-group" id="food">
 												Select Quantity:
-												<select>
-													<option value="01"></option>
-													<option value="02">1</option>
-													<option value="03">2</option>
-													<option value="04">3</option>
-													<option value="05">4</option>
-													<option value="06">5</option>
-													<option value="07">6</option>
-													<option value="08">7</option>
-													<option value="09">8</option>
-													<option value="10">9</option>
-													<option value="11">10</option>		
+												<select id="item-quantity">
+													<option disabled selected value>Select a quantity</option>
 												</select>
-										
+
 									</div>
                         </div>
 									<p></p>
 
-									
+
 									<ul class="actions">
 											<li><a href="donorChoices.html" class="button">Back</a></li>
 											<li><a href="donorChoices.html" class="button">Add Item and Continue Shopping</a></li>
-											<li><a href="donorPayment.html" class="button" onclick="writeUserData('Greg23', 'Greg', 'banana', '4.5');">Checkout</a></li>
-					
+											<li><a id="checkout" class="button">Checkout</a></li>
+
 										</ul>
 
 						</form>
@@ -100,7 +74,7 @@
 			<!-- Footer -->
 
 		</div>
-
+		<script src="firebasedb.js"></script>
 
 
 	</body>

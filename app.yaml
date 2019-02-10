@@ -6,10 +6,14 @@ handlers:
 - url: /(.+)
   static_files: www/\1
   upload: www/(.+)
+  expiration: "0d 0m 10s"
+  secure: always
   
 - url: /
   static_files: www/home.html
   upload: www/home.html
+  expiration: "0d 0m 10s"
+  secure: always
 
 automatic_scaling:
   target_cpu_utilization: 0.65

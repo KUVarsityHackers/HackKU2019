@@ -9,18 +9,68 @@
  		<title>Homeless Helper</title>
  		<meta charset="utf-8" />
  		<meta name="viewport" content="width=device-width, initial-scale=1" />
- 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
  		<link rel="stylesheet" href="main.css" />
- 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+		 <script src="cookies.js"></script>
+
+		 <!-- <script language="JavaScript" type="text/javascript" >
+		 var config = {
+				 apiKey: "AIzaSyARS9LFtCcuxdKxgvoejWKJMU1DauaDwOM",
+				 authDomain: "homelesshelper.firebaseapp.com",
+				 databaseURL: "https://homelesshelper.firebaseio.com",
+				 projectId: "homelesshelper"
+			 };
+
+			function saveData( ) {
+			firebase.initializeApp(config);
+	    var data = "hello";
+	    var expDate = getExpDate(10, 0, 0);
+	    setCookie("example", data, expDate);
+			console.log("Hellooo");
+			console.log(document.cookie);
+}
+</script> -->
+
+<script>
+var config = {
+		apiKey: "AIzaSyARS9LFtCcuxdKxgvoejWKJMU1DauaDwOM",
+		authDomain: "homelesshelper.firebaseapp.com",
+		databaseURL: "https://homelesshelper.firebaseio.com",
+		projectId: "homelesshelper"
+	};
+
+
+firebase.initializeApp(config);
+var cookie = getCookie("id");
+if(cookie == ""){
+	var myRef = firebase.database().ref("cart").push();
+	cookie = myRef.key;
+	var expDate = getExpDate(180, 0, 0);
+  setCookie("id", cookie, expDate);
+}
+console.log("Home page cookie: ");
+console.log(cookie);
+// var newData={
+//     item: "banana",
+//     quantity: 2
+//  }
+//
+// myRef.push(newData);
+</script>
+
  	</head>
-	<body>
+	<!-- <body onunload="saveData()"> -->
+	<body onunload="saveData()">
 			<!-- Banner -->
 				<section id="banner">
 					<h2>Homeless Helper</h2>
 					<p>Graciousously giving to eradicate homelessness.
 					<br />
 					<ul class="actions">
-						<li><a href=".\instascan_2\docs\scan.html" class="button">Donor</a></li>
+						<li><a href=".\scan.html" class="button">Donor</a></li>
 						<li><a href=".\storeVerification.html" class="button">Store</a></li>
 					</ul>
 					<img src="logo2.png" alt="logo" width="200">

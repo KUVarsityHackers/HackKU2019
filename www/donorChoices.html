@@ -6,7 +6,15 @@
 -->
 <html>
 	<head>
-			<link rel="stylesheet" href="./main.css" />
+
+		<link rel="stylesheet" href="./main.css" />
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<script src="cookies.js"></script>
+		<script language="JavaScript" type="text/javascript" >
+				var data = getCookie("id");
+				console.log("This page cookie: ");
+				console.log(data);
+		</script>
 	</head>
 	<body style="background-size: 200% 100% !important;
   -webkit-animation: move 10s ease infinite;
@@ -21,7 +29,7 @@
 			<section id="main" class="container 75%">
          <ul class="actions align-center">
 					 <div class="box">
-						 
+
   								<p></p>
                         <div>
 							<H2>
