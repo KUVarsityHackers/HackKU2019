@@ -7,11 +7,11 @@ var config = {
 firebase.initializeApp(config);
 console.log("js loaded");
 
-// var hobo = getCookie("hobo");
-// var id = getCookie("id");
+var hobo = getCookie("hobo");
+var id = getCookie("id");
 
-var hobo = "HOBO7";
-var id = "-LYLYJs6Ou_ZadX_DApv";
+// var hobo = "HOBO7";
+// var id = "-LYLYJs6Ou_ZadX_DApv";
 
 var query = firebase.database().ref('cart/'+id+'/'+hobo);
 query.once("value")
