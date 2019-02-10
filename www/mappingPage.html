@@ -89,7 +89,13 @@
 				query: 'Dillons',
 				fields: ['name', 'geometry'],
 				locationBias: sydney,
-				}				  
+				}	,		
+
+				{
+				query: 'Bus Stop',
+				fields: ['name', 'geometry'],
+				locationBias: sydney,
+				}		  
 			 ] ;
   
 			  service = new google.maps.places.PlacesService(map);
