@@ -2003,6 +2003,7 @@
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -2023,6 +2024,7 @@
 	}
 
 		input[type="text"]:invalid,
+		input[type="number"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		select:invalid,
@@ -2031,6 +2033,7 @@
 		}
 
 		input[type="text"]:focus,
+		input[type="number"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		select:focus,
@@ -2073,6 +2076,7 @@
 		}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -3037,7 +3041,7 @@
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
-		
+
 		 background-size: 200% 100% !important;
        		 -webkit-animation: move 10s ease infinite;
        		 animation: move 10s ease infinite;
@@ -3205,6 +3209,7 @@
 		}
 
 		#cta input[type="text"],
+		#cta input[type="number"],
 		#cta input[type="password"],
 		#cta input[type="email"],
 		#cta select,
@@ -3215,6 +3220,7 @@
 		}
 
 			#cta input[type="text"]:focus,
+			#cta input[type="number"],
 			#cta input[type="password"]:focus,
 			#cta input[type="email"]:focus,
 			#cta select:focus,

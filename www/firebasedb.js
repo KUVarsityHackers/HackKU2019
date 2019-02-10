@@ -37,3 +37,23 @@ $("#checkout").click(function() {
   console.log("checkout button");
   console.log($("#item-list").val());
 });
+
+$("#add").click(function(){
+  var item = $("#item-list").val();
+  var quantity = $("#item-quantity").val();
+
+  console.log(item);
+  var hobo = getCookie("hobo");
+  var id = getCookie("id");
+  // console.log(id);
+  // console.log(hobo);
+  // console.log(item);
+  // console.log(quantity);
+  var myRef = firebase.database().ref('cart/' + id +'/'+hobo);
+  var newData={
+      item: item,
+      quantity: quantity
+   }
+  myRef.push(newData);
+
+})

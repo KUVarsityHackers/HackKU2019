@@ -6,6 +6,17 @@
 -->
 <html>
 	<head>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<script src="cookies.js"></script>
+		<script language="JavaScript" type="text/javascript" >
+				var data = getCookie("id");
+				console.log("This page cookie: ");
+				console.log(data);
+				var hobo = getCookie("hobo");
+				console.log("This page cookie: ");
+				console.log(hobo);
+		</script>
 			<link rel="stylesheet" href="./main.css" />
 	</head>
 	<body style="background-size: 200% 100% !important;
@@ -25,15 +36,15 @@
 						Payment Information
 					</H2>
 					 <div class="box">
-						 <form method="post" action="#">
+						 <form>
 							 <input type="text" name="first_name" id="first_name" placeholder="First name" />
   					 			<p></p>
                 				<form>
-							<form method="post" action="#">
+							<form>
 								<input type="text" name="last_name" id="last_name" placeholder="Last name" />
 								 <p></p>
 								<form>
-							<form method="post" action="#">
+							<form>
 								<input type="text" name="credit_num" id="credit_num" placeholder="Credit Card Number" />
 								<p></p>
 								<form>
@@ -45,6 +56,7 @@
 								<div class="form-group" id="expiration-date">
 										Expiration Date:
 										<select>
+											<option disabled selected value>Select a month</option>
 											<option value="01">January</option>
 											<option value="02">February </option>
 											<option value="03">March</option>
@@ -61,6 +73,7 @@
 
 										<p></p>
 										<select>
+											<option disabled selected value>Select a year</option>
 											<option value="19"> 2019</option>
 											<option value="20"> 2020</option>
 											<option value="21"> 2021</option>
@@ -69,13 +82,31 @@
 											<option value="24"> 2024</option>
 										</select>
 									</div>
+
+									<p></p>
+									<div>
+									<form>
+										Phone number
+										<input type="number" name="num" maxlength="10" id="phone_number" placeholder="(###)###-###" />
+											 <p></p>
+														 <form>
+								</div>
+									<!-- <div class="form-group" id="expiration-date">
+											Phone number:
+											<p></p>
+											<input type="number" maxlength="10" name="phone_number" id="phone" placeholder="(###)###-###" />
+										</div> -->
+
                         </div>
 									<p></p>
 
 							<div class="row uniform">
 								<div class="12u">
-									<ul class="actions align-center">
-										<li><input type="submit" value="Enter" id="testpotato"/></li>
+									<!-- <ul class="actions align-center">
+										<li><input type="submit" value="Enter" id="pay"/></li>
+									</ul> -->
+									<ul class="actions align-center" style ="padding-bottom: 1%">
+											<li><a class="button" id="pay">Pay</a></li>
 									</ul>
 								</div>
 							</div>
@@ -90,6 +121,6 @@
 		</div>
 
 
-
+		<script src="payment.js"></script>
 	</body>
 </html>
