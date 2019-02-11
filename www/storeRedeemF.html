@@ -6,22 +6,22 @@
 -->
 <html>
 	<head>
+			<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+			<script src="cookies.js"></script>
+			<script language="JavaScript" type="text/javascript" >
+					var data = getCookie("id");
+					console.log("This page cookie: ");
+					console.log(data);
+					var hobo = getCookie("hobo");
+					console.log("This page cookie: ");
+					console.log(hobo);
+					</script>
+	
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="cookies.js"></script>
-		<script language="JavaScript" type="text/javascript" >
-				var data = getCookie("id");
-				console.log("This page cookie: ");
-				console.log(data);
-				var hobo = getCookie("hobo");
-				console.log("This page cookie: ");
-				console.log(hobo);
-		</script>
-
 		<link rel="stylesheet" href="./main.css" />
-
+		
 		<style>
 			table {
 				margin: 0 0 2em 0;
@@ -97,61 +97,82 @@
 		<div id="page-wrapper">
 
 
+			<!-- Main -->
 				<section id="main" class="container">
 						<div class="box">
-
+						 
 								<p></p>
 					  <div>
 							<ul class="actions align-center">
 						<H2>
-					Items in Cart
-					</H2>
+					Redeemable Items						
+					</H2>	
 					</ul>
 					</div>
 
 
-							<ul class="actions align-center">
-
-									<table id="redeem-table" class="alt6" css="border-style:">
+									
+									<div class="table-wrapper" style="padding-left: 5%; padding-right: 5%">
+										<table id="redeem-table" class="alt6" css="border-style:">
 											<thead>
 												<tr>
+													<!-- <th>Date Received</th> -->
 													<th>Item</th>
 													<th>Quantity</th>
-													<th>Unit Price</th>
+													<th>Credit</th>
+													<!-- <th>Fulfilled</th> -->
 												</tr>
 											</thead>
+											<!-- <tbody id="toAddTo">
+												<tr>
+													<th>2/9/19</th>
+													<th>Banana</th>
+													<th>$1.50</th>
+													<th>4</th>
+													<th>No</th>
+												</tr>
+											</tbody>
+											<tbody id="toAddTo">
+												<tr>
+														<th>2/9/19</th>
+														<th>Banana</th>
+														<th>$1.50</th>
+														<th>4</th>
+														<th>No</th>
+												</tr>
+											</tbody>
+											<tbody id="toAddTo">
+												<tr>
+														<th>2/9/19</th>
+														<th>Banana</th>
+														<th>$1.50</th>
+														<th>4</th>
+														<th>No</th>
+												</tr>
+											</tbody> -->
+						
 										</table>
-										</ul>
+									</div>
+								</section>
 
-										<ul>
-										<div class="actions align-center">
-												<section>
-													<h3></h3>
-													<h2 id="total-cost"></h2>
-												</section>
-										</div>
-										</ul>
-
-
-										<ul class="actions align-center" style ="padding-bottom: 1%">
-												<li><a href="thankYouUser.html" class="button" id="pay">Redeem</a></li>
-										</ul>
-
-								   </section>
-
-
-
-
+						</div>
+					</div>
+	
+	
+	
+	
+						<ul class="actions align-center" style ="padding-bottom: 53%">
+						<li><a href="home.html" class="button">Home</a></li>
+						
+					</ul>
+		
 			<!-- Footer -->
 				<footer id="footer">
 						<ul class="copyright">
 						<li>&copy; Untitled. All rights reserved.</li>
 						</ul>
 				</footer>
-
 		</div>
-
-		<!-- Scripts -->
-			<script src="redeem.js"></script>
+		<script src="redeem.js"></script>
 	</body>
 </html>

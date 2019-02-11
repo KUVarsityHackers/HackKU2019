@@ -22,18 +22,25 @@ $("#pay").click(function(){
     numstr = "0000000000";
   }
   var query = firebase.database().ref('cart/'+id+'/'+hobo);
+  // var name = "";
+
   query.once("value")
     .then(function(snapshot) {
+      console.log("in  query");
       snapshot.forEach(function(childSnapshot) {
         var key = childSnapshot.key;
         var childData = childSnapshot.val();
         childData.phone = numstr;
-        console.log(childData);
+        // console.log("child data", childData);
+
+        childData.phone = numstr;
+        console.log("child data", childData);
         var myRef = firebase.database().ref('users/'+hobo);
         myRef.push(childData);
       })
   }).then(function(){
     console.log("hello");
+    query.remove();
     window.location.replace('./mappingPage.html');  
   });
 })
